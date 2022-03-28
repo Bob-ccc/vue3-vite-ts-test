@@ -1,0 +1,44 @@
+// 通用css
+.common-flex {
+  display: flex !important;
+}
+.common-flex-1 {
+  flex: 1;
+}
+.common-flex-center {
+  justify-content: center !important;
+  align-items: center !important;
+}
+.common-flex-wrap {
+  flex-wrap: wrap !important;
+}
+.common-flex-direction-column {
+  flex-direction: column !important;
+}
+.common-flex-items-center {
+  align-items: center !important;
+}
+.common-flex-justify-end {
+  justify-content: flex-end !important;
+}
+.common-flex-justify-between {
+  justify-content: space-between !important;
+}
+.common-flex-justify-center {
+  justify-content: center !important;
+}
+
+.common-height-100p {
+  height: 100%;
+}
+
+.common-font-size-18{
+  font-size: $font18;
+}
+.common-font-size-24{
+  font-size: $font24;
+}
+
+.common-width-200{
+  width: 200px;
+}

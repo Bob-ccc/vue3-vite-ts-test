@@ -1,0 +1,52 @@
+@import './base.scss';
+@import './common.scss';
+@import './themes/dark.scss';
+@import './themes/normal.scss';
+
+:root {
+  --blue: rgb(31,79,137);
+  --yellow:  rgb(255,255,36);
+  --pink:  rgb(255,179,179);
+  --white:  rgb(255,255,255);
+  --gray: rgb(139,163,158);
+  --lightGrey: rgb(242,241,246);
+  --lightGrey1: rgb(222,221,226);
+  --red: rgb(255,68,26);
+  --black: rgb(0,0,0);
+  // --bgColor: var(--blue);
+  // --bgColor1: var(--gray);
+  // --fontColor: var(--pink);
+  // --borderColor: var(--pink);
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+}
+
+
+#app{
+ height: 100%;
+}
+
+#layout{
+  transition: all 1s;
+  background-color: var(--bgColor);
+
+  #head{
+    transition: inherit;
+    // background-color: var(--bgColor);
+    color: var(--fontColor);
+  }
+  .container{
+    transition: inherit;
+    #tab-list{
+      transition: inherit;
+      // background-color: var(--bgColor);
+    }
+  }
+  #break-nav{
+    // background-color: var(--bgColor);
+
+  }
+}
