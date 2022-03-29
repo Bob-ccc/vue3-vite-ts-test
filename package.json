@@ -6,8 +6,6 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-list": "^32.0.0",
-    "@ckeditor/ckeditor5-vue": "^2.0.1",
     "bpmn-js": "^9.0.2",
     "moment": "^2.29.1",
     "vue": "^3.0.4",
@@ -15,11 +13,12 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^32.0.0",
-    "@vue/compiler-sfc": "^3.0.4",
     "@vitejs/plugin-vue": "^1.10.1",
-    "vite": "^2.5.1",
+    "@vue/compiler-sfc": "^3.0.4",
+    "sass": "^1.49.7",
     "typescript": "^4.5.5",
-    "sass": "^1.49.7"
+    "vite": "^2.5.1",
+    "vite-plugin-windicss": "^1.8.3",
+    "windicss": "^3.5.1"
   }
 }
