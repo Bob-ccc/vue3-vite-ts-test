@@ -1,7 +1,7 @@
 <template>
-  <div id="container" class="common-flex-1 common-flex common-flex-direction-column">
+  <div id="content" class="common-flex-1 common-flex common-flex-direction-column">
     <BreakNav />
-    <div class="views common-flex-1">
+    <div id="views" class="common-flex-1">
       <router-view v-slot="{ Component }">
         <keep-alive v-if="$route.meta.keepAlive">
           <component :is="Component" />
@@ -13,11 +13,11 @@
 </template>
 
 <script setup>
-import BreakNav from './breakNav.vue'
+import BreakNav from './BreakNav.vue'
 </script>
 
 <style scoped>
-.views{
+#views{
   padding: 20px;
   border-top-left-radius: 20px;
   background-color: var(--bgColor1);

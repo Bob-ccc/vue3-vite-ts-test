@@ -1,7 +1,7 @@
 <template>
   <div class="logo" @click="beclick">
-    <img class="logo-up" :style="'transform:rotate('+rotate+'deg);transition-duration:'+time+'s;'"  src="../assets/svg/logoup.svg" alt="">
-    <img class="logo-bg" :style="'transform:rotate('+rotate * 2+'deg);transition-duration:'+time+'s;'"  src="../assets/svg/logobg.svg" alt="">
+    <img class="logo-up" :style="'transform:rotate('+rotate+'deg);transition-duration:'+time+'s;'"  src="../../assets/svg/logoup.svg" alt="">
+    <img class="logo-bg" :style="'transform:rotate('+rotate * 2+'deg);transition-duration:'+time+'s;'"  src="../../assets/svg/logobg.svg" alt="">
   </div>
 </template>
 

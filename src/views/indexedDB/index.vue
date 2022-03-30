@@ -6,14 +6,16 @@
         {{ item.title }} ==> {{ item.content }}
       </div>
     </div>
-    <div>
-      <div>
-        title:<input type="text" v-model="title">
+    <div >
+      <div class="rounded-10px w-300px m-5px p-10px bg-blue-500">
+        <span class="inline-block w-80px">title: </span>
+        <input class="rounded-5px p-5px bg-blue-300 border-2 border-blue-300 hover:border-light-500" type="text" v-model="title">
       </div>
-      <div>
-        content:<input type="text" v-model="content">
-      </div>
-      <button @click="addTitle">增加</button>
+      <div class="rounded-10px w-300px m-5px p-10px bg-blue-500">
+        <span class="inline-block w-80px">content: </span>
+        <input class="rounded-5px p-5px bg-blue-300 border-2 border-blue-300 hover:border-light-500"  type="text" v-model="content">
+      </div >
+      <button class="rounded-10px w-200px m-5px p-10px bg-blue-500 hover:(bg-red-500 text-light-500)" @click="addTitle">增加</button>
     </div>
   </div>
 </template>

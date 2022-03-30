@@ -6,7 +6,7 @@
     :style="nowTheme"
   >
     <Head :theme='themes' @changeTheme='changeTheme' @changeColor="changeColor" />
-    <div class="container common-flex common-flex-1">
+    <div id="container" class="common-flex common-flex-1">
       <TabList />
       <Container />
     </div>

@@ -5,6 +5,5 @@
   </div>
 </template>
 <script setup>
-import Workflow from '@/components/Workflow.vue'
 
 </script>

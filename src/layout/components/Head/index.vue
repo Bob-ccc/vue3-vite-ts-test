@@ -23,8 +23,6 @@
 </template>
 
 <script setup lang="ts">
-import Logo from '@/components/Logo.vue'
-import NowTime from '@/components/NowTime.vue'
 import { getCurrentInstance, ref, defineEmits, onMounted } from 'vue'
 import colorConfig from './colorConfig'
 const props = defineProps({

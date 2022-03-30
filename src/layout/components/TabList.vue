@@ -28,9 +28,9 @@
 
 <script setup>
 import { ref, onMounted, computed } from "vue";
-import { useStore } from "vuex";
+// import { useStore } from "vuex";
 import { useRouter } from "vue-router";
-const store = useStore();
+// const store = useStore();
 
 const navState = ref(true);
 
@@ -41,7 +41,7 @@ const tablist = computed(() => route.getRoutes());
 
 const change = () => {
   navState.value = !navState.value;
-  store.dispatch('setNavState', navState.value)
+  // store.dispatch('setNavState', navState.value)
 };
 
 // 路由跳转
@@ -50,7 +50,7 @@ const routeTo = (item) => {
 };
 
 onMounted(() => {
-  navState.value = store.getters.navState
+  // navState.value = store.getters.navState
 });
 </script>
 

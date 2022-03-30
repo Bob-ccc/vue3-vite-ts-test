@@ -3,6 +3,8 @@
     面包屑/面包屑
   </div>
 </template>
+<script lang="ts" setup>
+</script>
 
 <style scoped>
 #break-nav{

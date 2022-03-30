@@ -38,15 +38,24 @@ body{
     // background-color: var(--bgColor);
     color: var(--fontColor);
   }
-  .container{
+  #container{
     transition: inherit;
     #tab-list{
       transition: inherit;
+      color: var(--fontColor);
       // background-color: var(--bgColor);
-    }
-  }
-  #break-nav{
-    // background-color: var(--bgColor);
 
+    }
+    #content{
+      transition: inherit;
+      #break-nav{
+        transition: inherit;
+        color: var(--fontColor);
+        // background-color: var(--bgColor);
+      }
+      #views{
+        // background-color: var(--bgColor1);
+      }
+    }
   }
 }
