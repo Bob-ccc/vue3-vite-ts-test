@@ -1,6 +1,11 @@
 <template>
   <div id="break-nav">
-    面包屑/面包屑
+    <a-breadcrumb>
+      <a-breadcrumb-item>Home</a-breadcrumb-item>
+      <a-breadcrumb-item>Application Center</a-breadcrumb-item>
+      <a-breadcrumb-item>Application List</a-breadcrumb-item>
+      <a-breadcrumb-item>An Application</a-breadcrumb-item>
+  </a-breadcrumb>
   </div>
 </template>
 <script lang="ts" setup>

@@ -2,6 +2,7 @@
 @import './common.scss';
 @import './themes/dark.scss';
 @import './themes/normal.scss';
+@import './themes/yellow.scss';
 
 :root {
   --blue: rgb(31,79,137);
@@ -17,6 +18,11 @@
   // --bgColor1: var(--gray);
   // --fontColor: var(--pink);
   // --borderColor: var(--pink);
+}
+
+@font-face{
+  font-family:wawwwsxt;
+  src:url('../assets/font/wawwwsxt.ttf')
 }
 
 body{
