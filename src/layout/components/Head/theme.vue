@@ -46,7 +46,7 @@ onMounted(() => {
           <!-- <a @click="hide">Close</a> -->
         </div>
       </template>
-      <skin-filled class="text-40px !text-blue-300" />
+      <skin-filled class="text-26px !text-blue-300" />
     </a-popover>
   </div>
 </template>

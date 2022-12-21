@@ -96,7 +96,7 @@ Axios.interceptors.response.use(
         // error.config && removePending(error.config)
         // options.loading && closeLoading(options) // 关闭loading
         // options.showErrorMessage && httpErrorStatusHandle(error) // 处理错误状态码
-        return Promise.reject(error) // 错误继续返回给到具体页面
+        return Promise.reject(error.response) // 错误继续返回给到具体页面
     }
 )
 

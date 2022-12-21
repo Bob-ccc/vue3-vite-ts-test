@@ -8,12 +8,24 @@ import {
   SmileOutlined
 } from '@ant-design/icons-vue';
 import type { Rule } from 'ant-design-vue/es/form';
-import { randomImage, login } from "@/api/login"
+import { login } from "@/api/login"
 import router from '@/router';
 
-const requestCodeSuccess = ref(false)
-const randCodeImage = ref('')
-const currdatetime = ref(0)
+import useCheckCode from "./hooks/useCheckCode";
+
+
+const checkKey = ref(0)
+const model = reactive<FormState>({
+  username: '',
+  password: '',
+  inputCode: ''
+})
+
+const { requestCodeSuccess, randCodeImage, handleChangeCheckCode } = useCheckCode(model,checkKey)
+
+// const requestCodeSuccess = ref(false)
+// const randCodeImage = ref('')
+// const currdatetime = ref(0)
 const formRef = ref<FormInstance>();
 
 interface FormState {
@@ -22,11 +34,6 @@ interface FormState {
   inputCode: string;
 }
 
-const model = reactive<FormState>({
-  username: '',
-  password: '',
-  inputCode: ''
-})
 
 // 校验规则
 const rules: Record<string, Rule[]> = {
@@ -36,22 +43,21 @@ const rules: Record<string, Rule[]> = {
 };
 
 const loading = ref(false)
-const checkKey = ref(0)
 // 更新验证码
-const handleChangeCheckCode = () => {
-  currdatetime.value = new Date().getTime();
-  model.inputCode = ''
-  randomImage({currdatetime:currdatetime.value})
-    .then((res: any) => {
-      console.log(res);
-      randCodeImage.value = res.data.captcha
-      checkKey.value = res.data.code
-      requestCodeSuccess.value = true
-    })
-    .catch((err) => {
-      requestCodeSuccess.value = false
-    })
-}
+// const handleChangeCheckCode = () => {
+//   currdatetime.value = new Date().getTime();
+//   model.inputCode = ''
+//   randomImage({currdatetime:currdatetime.value})
+//     .then((res: any) => {
+//       console.log(res);
+//       randCodeImage.value = res.data.captcha
+//       checkKey.value = res.data.code
+//       requestCodeSuccess.value = true
+//     })
+//     .catch((err) => {
+//       requestCodeSuccess.value = false
+//     })
+// }
 
 // 登录
 const handleFinish = () => {

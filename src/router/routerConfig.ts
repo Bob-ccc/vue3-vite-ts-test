@@ -2,13 +2,13 @@ export const tabList = [
   {
     path: "home",
     name: "Home",
-    meta: { title: "首页", keepAlive: true },
+    meta: { title: "首页", keepAlive: false, iconName: 'HomeTwoTone' },
     component: () => import("@/views/home/index.vue"),
   },
   {
     path: "user",
     name: "User",
-    meta: { title: "用户列表", keepAlive: true },
+    meta: { title: "用户列表", keepAlive: true, iconName: 'IdcardTwoTone' },
     component: () => import("@/views/user/index.vue"),
   },
   {

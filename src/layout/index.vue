@@ -1,12 +1,12 @@
 <template>
   <div
     id="layout"
-    class="common-height-100p common-flex common-flex-direction-column"
+    class="h-[100vh] flex flex-col overflow-hidden"
     :class="themeClass"
     :style="nowTheme"
   >
     <Head :theme='themes' @changeTheme='changeTheme' @changeColor="changeColor" />
-    <div id="container" class="common-flex common-flex-1">
+    <div id="container" class="flex flex-1 overflow-hidden">
       <TabList />
       <Container />
     </div>

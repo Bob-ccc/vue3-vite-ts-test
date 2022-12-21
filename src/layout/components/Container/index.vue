@@ -1,13 +1,15 @@
 <template>
   <div id="content" class="common-flex-1 common-flex common-flex-direction-column">
     <BreakNav />
-    <div id="views" class="common-flex-1">
-      <router-view v-slot="{ Component }">
-        <keep-alive v-if="$route.meta.keepAlive">
-          <component :is="Component" />
-        </keep-alive>
-        <component :is="Component" v-else />
-      </router-view>
+    <div id="views" class="common-flex-1 overflow-hidden p-20px pr-10px">
+      <div class="overflow-auto h-[100%]">
+        <router-view v-slot="{ Component }">
+          <keep-alive >
+            <component :is="Component" :key="$route.name" v-if="$route.meta.keepAlive"/>
+          </keep-alive>
+          <component :is="Component" :key="$route.name" v-if="!$route.meta.keepAlive" />
+        </router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -18,7 +20,6 @@ import BreakNav from './BreakNav.vue'
 
 <style scoped>
 #views{
-  padding: 20px;
   border-top-left-radius: 20px;
   background-color: var(--bgColor1);
   box-sizing: border-box;

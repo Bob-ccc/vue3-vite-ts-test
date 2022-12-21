@@ -1,24 +1,45 @@
 
 <script setup lang="ts">
-import { ref } from "vue"
-const list = ref([1,2,3])
-// setInterval(()=>{
-//   list.value.push(list.value.length)
-//   setTimeout(() => {
-//     const dom = document.querySelector("#dom"+list.value.length)
-//     dom?.scrollIntoView(false)
-//   }, 200);
-// },1000)
+import { onMounted } from "vue"
+import UseMap from './hooks/useMap'
+import UseSex from './hooks/useSex'
+import UseCount from './hooks/useCount'
+
+const { option: mapOption, setMapData } = UseMap()
+const { sexOption, setSexData } = UseSex()
+const { countOption, setcountData } = UseCount()
+
+
+
+const refresh = () =>{
+  setSexData()
+  setcountData()
+  setMapData()
+}
+
+onMounted(() => {
+  refresh()
+})
 </script>
 
 <template>
-  <div class="h-500px w-400px bg-light-900 overflow-auto">
-    <div class="h-100px bg-cyan-900 m-20px" :id="'dom'+(index+1)" v-for="(item,index) in list" :key="index">
+  <div class="h-40px mb-10px flex justify-between items-center px-20px py-10px bg-white rounded-tl-14px">
+    <div class="text-16px font-bold text-blue-300">
+      人员数据统计
+    </div>
+    <div class="text-14px text-blue-300 select-none cursor-pointer">
+      <span @click="refresh">刷新</span>
     </div>
   </div>
- 
-  <!-- <div class="h-500px w-400px bg-light-900 overflow-auto">
-    <div class="h-100px bg-cyan-900 m-20px" v-for="(item,index) in list" :key="index">
+  <div class="w-[100%] h-400px flex mb-10px py-20px bg-white">
+    <div class="w-[70%]">
+      <EChart :options="countOption" />
     </div>
-  </div> -->
+    <div class="w-[30%]">
+      <EChart :options="sexOption" />
+    </div>
+  </div>
+  <div class="w-[100%] h-500px py-20px bg-white">
+    <EChart :options="mapOption" />
+  </div>
 </template>
